@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DeltaFlightBooking - Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="content/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&amp;family=Roboto&amp;display=swap"
+          rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="css_V2/animate.css">
+    <link rel="stylesheet" href="css_V2/icomoon.css">
+    <link rel="stylesheet" href="css_V2/bootstrap.min.css">
+    <link rel="stylesheet" href="css_V2/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css_V2/magnific-popup.css">
+    <link rel="stylesheet" href="css_V2/flexslider.css">
+    <link rel="stylesheet" href="css_V2/owl.carousel.min.css">
+    <link rel="stylesheet" href="css_V2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css_V2/bootstrap-datepicker.css">
+    <!-- <link rel="stylesheet" href="css_V2/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css_v2/form.css">
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+
+                <img src="content/images/logo-black.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="aboutus.html" class="nav-item nav-link">About</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="tel:+1-800-000-0000" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Call Now</a>
+            </div>
+        </nav>
+
+        <!-- Carousel Start -->
+        <!-- <div class="carousel-header">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="img_V2/carousel-2.jpg" class="img-fluid" alt="Image">
+                        <div class="carousel-caption">
+                            <div class="p-3" style="max-width: 900px;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+        <div class="container-fluid  bg-breadcrumb bg-hero ">
+            <div class="container text-center py-5">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active show" id="flights" role="tabpanel" aria-labelledby="flights-tab">
+                        <input type="hidden" value="Home" id="txt_HDNAirline">
+                        <div class="tp-line-rado">
+                            <div class="button-radio">
+                                <div class="button-radio button-radio-inline">
+                                    <input id="rdoreturn" value="r" type="radio" name="jType" checked="">
+                                    <label for="rdoreturn">Round Trip</label>
+                                </div>
+                                <div class="button-radio button-radio-inline">
+                                    <input id="rdooneway" value="o" type="radio" name="jType">
+                                    <label for="rdooneway">Oneway</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-floating">
+
+                                    <input name="txtFlyFrom" id="txtFlyFrom" class="form-control border-0" type="text"
+                                           required="required" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                           placeholder="City or airport">
+                                    <label class="" for="departureRoundtrip0">
+                                        Flying
+                                        from
+                                    </label>
+                                    <div class="swap" id="swap_btn">
+                                        <i class="fa-solid fa-arrows-rotate Updown"></i>
+                                    </div>
+                                    <i class="icon-location4"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-floating">
+                                    <input name="txtFlyTo" id="txtFlyTo" class="form-control border-0"
+                                           required="required" type="text" placeholder="City or airport" autocomplete="off"
+                                           autocorrect="off" autocapitalize="off">
+                                    <label class="" for="arrivalRoundtrip0">
+                                        Flying to
+                                    </label>
+                                    <i class="icon-location4"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="text" name="_departDate" required="required"
+                                           class="form-control border-0" data-date-format="mm/dd/yyyy"
+                                           data-validation-error-msg="Please enter a valid date" data-date-start-date="+0d"
+                                           data-date-end-date="+340d" placeholder="YYYY-MM-DD" id="txt_checkin">
+                                    <label class="" for="departureDateRoundtrip0">
+                                        Departure date
+                                    </label>
+                                    <i class="icon-calendar3"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="text" name="_returnDate" class="form-control border-0"
+                                           data-date-format="/dd/yyyy-mm"
+                                           data-validation-error-msg="Please enter a valid date" placeholder="YYYY-MM-DD"
+                                           data-date-start-date="+0d" data-date-end-date="+340d" id="txtReturnDate">
+                                    <label class="" for="departureDateRoundtrip1">
+                                        Return date
+                                    </label>
+                                    <i class="icon-calendar3"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-floating">
+                                    <input name="txt_name" class="form-control border-0" type="text" id="txt_name"
+                                           autocomplete="off" autocorrect="off" autocapitalize="off"
+                                           placeholder="Enter Name">
+                                    <label class="" for="departureRoundtrip0">
+                                        Name
+                                    </label>
+                                    <i class="icon-user"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input name="txt_Phone" class="form-control border-0" type="text"
+                                           required="required" id="txt_Phone" autocomplete="off" autocorrect="off"
+                                           autocapitalize="off" placeholder="Enter Phone No"
+                                           onkeypress="javascript:return isNumber(event)" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                                           maxlength="10">
+                                    <label class="" for="departureRoundtrip0">
+                                        Phone
+                                    </label>
+                                    <i class="icon-phone"></i>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input name="txt_Email" class="form-control border-0" type="text" id="txt_Email"
+                                           placeholder="Enter Email" autocomplete="off" autocorrect="off"
+                                           autocapitalize="off">
+                                    <label class="" for="arrivalRoundtrip0">
+                                        Email
+                                    </label>
+                                    <i class="icon-mail5"></i>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating ">
+                                    <label class="" for="arrivalRoundtrip0"> </label>
+                                    <select class="form-control border-0 " id="_cabinClass" name="_cabinClass"
+                                            required="required">
+                                        <option selected="selected" value="E">Economy</option>
+                                        <option value="W">Premium Economy</option>
+                                        <option value="B">Business</option>
+                                        <option value="F">First Class</option>
+                                        <option value="P">Premium First</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating" id="formButton">
+                                    <!-- <label class="field-label">Passengers</label> -->
+                                    <div class="form-control border-0" id="totalPax">
+                                        1
+                                        Traveller(s)
+                                    </div>
+                                    <div id="myDropdown_n" class="dropdown-content-n">
+                                        <div class="innr_pnl">
+                                            <div class="main_dv">
+                                                <div class="ttl_col">
+                                                    <p>Adult</p>
+                                                    <span>(12+ yrs)</span>
+                                                </div>
+                                                <div class="count_col">
+                                                    <div class="plu-mis-s">
+                                                        <div class="m1">
+                                                            <input type="button" id="_adultsDec" value="-"
+                                                                   class="minus_boxADt qtyDec" field="quantity">
+                                                        </div>
+                                                        <div class="tx">
+                                                            <input type="text" name="_adults" value="1"
+                                                                   class="numbe_box2" id="_adults" readonly="">
+                                                        </div>
+                                                        <div class="pl">
+                                                            <input type="button" id="_adultsInc" value="+"
+                                                                   class="plus_box1 qtyInc" field="quantity">
+                                                        </div>
+                                                        <div class="clr"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main_dv">
+                                                <div class="ttl_col">
+                                                    <p>Children</p>
+                                                    <span>(2+ 12 yrs)</span>
+                                                </div>
+                                                <div class="count_col">
+                                                    <div class="plu-mis-s">
+                                                        <div class="m1">
+                                                            <input type="button" id="_childrenDec" value="-"
+                                                                   class="minus_box1 qtyDec" field="quantity1">
+                                                        </div>
+                                                        <div class="tx">
+                                                            <input type="text" name="_children" value="0"
+                                                                   class="numbe_box2" id="_children" readonly="">
+                                                        </div>
+                                                        <div class="pl">
+                                                            <input type="button" id="_childrenInd" value="+"
+                                                                   class="plus_boxChd qtyInc" field="quantity1">
+                                                        </div>
+                                                        <div class="clr"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main_dv">
+                                                <div class="ttl_col">
+                                                    <p>Infant(s)</p>
+                                                    <span>(below 2 yrs)</span>
+                                                </div>
+                                                <div class="count_col">
+                                                    <div class="plu-mis-s">
+                                                        <div class="m1">
+                                                            <input type="button" id="_infantsDec" value="-"
+                                                                   class="minus_box1 qtyDec" field="quantity2">
+                                                        </div>
+                                                        <div class="tx">
+                                                            <input type="text" name="_infants" value="0"
+                                                                   class="numbe_box2" id="_infants" readonly="">
+                                                        </div>
+                                                        <div class="pl">
+                                                            <input type="button" id="_infantsInd" value="+"
+                                                                   class="plus_box1Inf qtyInc" field="quantity2">
+                                                        </div>
+                                                        <div class="clr"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clr"></div>
+                                            <a id="done" class="hideBtn">Done</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-3">
+
+                                <a href="tel:+1-800-000-0000" class="btn btn-primary w-100 py-3" name="HomePage">
+                                    Call:
+                                    +1 (800) 000-0000
+                                </a>
+                            </div>
+
+                            <div class="col-md-12 col-lg-3">
+                                <input type="submit" class="btn btn-primary w-100 py-3" name="HomePage" tabindex="10"
+                                       id="Flight-Search-Submit" value="Search Flights">
+                            </div>
+                        </div>
+
+                        <!-- <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="name"
+                                            placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="email"
+                                            placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="subject"
+                                            placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="Leave a message here"
+                                            id="message" style="height: 160px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+    </div>
+    <div class="container-fluid search-bar position-absolute" style="top: 50%; transform: translateY(-50%);">
+        <div class="container">
+
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+    <!-- Services Start -->
+    <div class="container-fluid bg-light service py-5">
+        <div class="container pb-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h5 class="section-title px-3">Searvices</h5>
+                <h1 class="mb-0">Our Services</h1>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-lg-12">
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="service-content-inner d-flex flex-column flex-lg-row align-items-center bg-white border border-primary rounded p-4">
+                                <div class="service-icon p-4">
+                                    <i class="fa-solid fa-dollar-sign fa-4x text-primary"></i>
+                                </div>
+                                <div class="service-content text-sm-center text-xs-center d-flex flex-column align-items-center">
+                                    <h5 class="mb-4">Cheap Booking Fares</h5>
+                                    <p class="mb-0 text-center">
+                                        Find yourself the ultimate deals on low-cost flight
+                                        deals like nowhere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="service-content-inner d-flex flex-column flex-lg-row align-items-center bg-white border border-primary rounded p-4 ">
+                                <div class="service-icon p-4">
+                                    <i class="fa-solid fa-tag text-primary fa-4x"></i>
+                                </div>
+                                <div class="service-content text-sm-center d-flex flex-column align-items-center">
+                                    <h5 class="mb-4">Exciting Travel Deals</h5>
+                                    <p class="mb-0 text-center">
+                                        Search over thousands of airlines, hotels, and flight
+                                        deals all at one place.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="service-content-inner d-flex flex-column flex-lg-row align-items-center bg-white border border-primary rounded p-4 ">
+                                <div class="service-icon p-4">
+                                    <i class="fa fa-headset fa-4x text-primary"></i>
+                                </div>
+                                <div class="service-content text-sm-center d-flex flex-column align-items-center">
+                                    <h5 class="mb-4">24X7 Support Team</h5>
+                                    <p class="mb-0 text-center">
+                                        Our travel expert 24X7 ready to resolve your issues
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="service-content-inner d-flex flex-column flex-lg-row align-items-center bg-white border border-primary rounded p-4 ">
+                                <div class="service-icon p-4">
+                                    <i class="fa fa-calendar-check fa-4x text-primary"></i>
+                                </div>
+                                <div class="service-content text-sm-center d-flex flex-column align-items-center">
+                                    <h5 class="mb-4">Effortless Bookings</h5>
+                                    <p class="mb-0 text-center">
+                                        Search, Explore, Select and Fly the only easy way to
+                                        book your trips.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="tel:+1-800-000-0000">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+    <!-- Destination Start -->
+    <div class="container-fluid destination py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h5 class="section-title px-3">Destination</h5>
+                <h1 class="mb-0">Popular Destination</h1>
+            </div>
+            <div class="tab-class text-center">
+
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-xl-8">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid rounded w-100" src="img_V2/destination-1.jpg" alt="">
+                                            <div class="destination-overlay p-4">
+
+                                                <h4 class="text-white mb-2 mt-3">New York City</h4>
+                                                <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                                    Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                            <div class="search-icon">
+                                                <a href="img_V2/destination-1.jpg" data-lightbox="destination-1">
+                                                    <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid rounded w-100" src="img_V2/destination-2.jpg" alt="">
+                                            <div class="destination-overlay p-4">
+
+                                                <h4 class="text-white mb-2 mt-3">Las vegas</h4>
+                                                <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                                    Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                            <div class="search-icon">
+                                                <a href="img_V2/destination-2.jpg" data-lightbox="destination-2">
+                                                    <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid rounded w-100" src="img_V2/destination-7.jpg" alt="">
+                                            <div class="destination-overlay p-4">
+
+                                                <h4 class="text-white mb-2 mt-3">Los angelas</h4>
+                                                <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                                    Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                            <div class="search-icon">
+                                                <a href="img_V2/destination-7.jpg" data-lightbox="destination-7">
+                                                    <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid rounded w-100" src="img_V2/destination-8.jpg" alt="">
+                                            <div class="destination-overlay p-4">
+
+                                                <h4 class="text-white mb-2 mt-3">Los angelas</h4>
+                                                <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                                    Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                            <div class="search-icon">
+                                                <a href="img_V2/destination-8.jpg" data-lightbox="destination-8">
+                                                    <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="destination-img h-100">
+                                    <img class="img-fluid rounded w-100 h-100" src="img_V2/destination-9.jpg"
+                                         style="object-fit: cover; min-height: 300px;" alt="">
+                                    <div class="destination-overlay p-4">
+
+                                        <h4 class="text-white mb-2 mt-3">San francisco</h4>
+                                        <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                            Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="search-icon">
+                                        <a href="img_V2/destination-9.jpg" data-lightbox="destination-4">
+                                            <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="destination-img">
+                                    <img class="img-fluid rounded w-100" src="img_V2/destination-4.jpg" alt="">
+                                    <div class="destination-overlay p-4">
+
+                                        <h4 class="text-white mb-2 mt-3">Los angelas</h4>
+                                        <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                            Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="search-icon">
+                                        <a href="img_V2/destination-4.jpg" data-lightbox="destination-4">
+                                            <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="destination-img">
+                                    <img class="img-fluid rounded w-100" src="img_V2/destination-5.jpg" alt="">
+                                    <div class="destination-overlay p-4">
+
+                                        <h4 class="text-white mb-2 mt-3">Los angelas</h4>
+                                        <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                            Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="search-icon">
+                                        <a href="img_V2/destination-5.jpg" data-lightbox="destination-5">
+                                            <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="destination-img">
+                                    <img class="img-fluid rounded w-100" src="img_V2/destination-6.jpg" alt="">
+                                    <div class="destination-overlay p-4">
+
+                                        <h4 class="text-white mb-2 mt-3">Los angelas</h4>
+                                        <a href="tel:+1-800-000-0000" class="btn-hover text-white">
+                                            Call Now <i class="fa fa-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="search-icon">
+                                        <a href="img_V2/destination-6.jpg" data-lightbox="destination-6">
+                                            <i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Destination End -->
+    <!-- Tour Booking Start -->
+    <!-- Tour Booking End -->
+    <!-- Travel Guide Start -->
+    <!-- Travel Guide End -->
+    <!-- Blog Start -->
+    <!-- Blog End -->
+    <!-- Subscribe Start -->
+    <div class="container-fluid subscribe py-5">
+        <div class="container text-center py-5">
+            <div class="mx-auto text-center" style="max-width: 900px;">
+                <h5 class="subscribe-title px-3">Call Now</h5>
+                <h1 class="text-white mb-4">Airline Ticket Reservation Deals</h1>
+                <p class="text-white mb-5">
+                    Looking for the best deals on airline ticket reservations? Visit
+                    DeltaFlightBooking.com.We helping you save big on your next flight booking to any domestic and
+                    international destinations. Our airline ticket reservation dealsare much helpful for you to make
+                    your travel cheaper and savings. Whether you're planning a family vacation or a business trip,
+                    finding the cheapest deals can make a significant difference in your travel budget.
+                </p>
+                <div class="position-relative mx-auto">
+                    <a href="tel:+1-800-000-0000"
+                       class="btn btn-primary rounded-pill text-center py-2 px-4 mt-2 me-2">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscribe End -->
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 pb-0">
+        <div class="container p-0">
+            <div class="row g-5">
+
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Company</h4>
+                        <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                        <a href="aboutus.html"><i class="fas fa-angle-right me-2"></i> About</a>
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Support</h4>
+
+                        <a href="PrivacyPolicy.html"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                        <a href="RefundPolicy.html"><i class="fas fa-angle-right me-2"></i> Refund Policy</a>
+                        <a href="TermsCondition.html"><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Need Help</h4>
+                        <p class="m-0 text-white">Got Questions? Call us 24/7</p>
+                        <a href="tel:+1-800-000-0000">
+                            <i class="fas fa-angle-right me-2"></i> Call Now:+1 (800)
+                            000-0000
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 justify-content-center align-items-center">
+                <div class="col-md-6 text-center mb-md-0">
+                    <i class="fas fa-copyright me-2"></i><span class="text-white">DeltaFlightBooking</span>, All right
+                    reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    <!-- Dependencies -->
+    <div id="resultLoading" style="display: none; width: 100%; height: 100%; position: fixed; z-index: 10000; top: 0px; left: 0px; right: 0px; bottom: 0px; margin: auto;">
+        <div style="width: 340px; height: 200px; text-align: center; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; margin: auto; z-index: 10; color: rgb(255, 255, 255);">
+            <div class="uil-default-css">
+                <img src="content/images/loader.gif" style="max-width: 150px; max-height: 150px; display: block; margin-left: auto; margin-right: auto;" />
+            </div>
+            <div class="loader-text" style="display: block; font-size: 18px; font-weight: 300;">&nbsp;</div>
+        </div>
+        <div style="background: rgb(0, 0, 0); opacity: 0.6; width: 100%; height: 100%; position: absolute; top: 0px;"></div>
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js_V2/jquery.easing.1.3.js"></script>
+    <script src="js_V2/bootstrap.min.js"></script>
+    <script src="js_V2/jquery.waypoints.min.js"></script>
+    <script src="js_V2/jquery.flexslider-min.js"></script>
+    <script src="js_V2/owl.carousel.min.js"></script>
+    <script src="js_V2/jquery.magnific-popup.min.js"></script>
+    <script src="js_V2/magnific-popup-options.js"></script>
+    <script src="js_V2/bootstrap-datepicker.js"></script>
+    <script src="js_V2/mainf2a2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#totalPax").click(function () {
+                $("#myDropdown_n").addClass("show")
+                $(".hideBtn").click(function () {
+                    $("#myDropdown_n").removeClass("show")
+                })
+            });
+        });
+    </script>
+    <script src="js_V2/searchValidation.js"></script>
+    <script src="js_V2/jquery.alerts.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js_v2/main.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/67179cdb4304e3196ad598d0/1iaq3pf3j';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+
+
+</html>
