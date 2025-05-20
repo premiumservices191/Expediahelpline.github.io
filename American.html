@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight booking with faresbuddies</title>
+    <link rel="stylesheet" href="American/fonts/americansans-light.woff">
+    <link rel="stylesheet" href="American/fonts/americansans-light.woff2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="American/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="American/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <nav class="nav-bar">
+                        <ul>
+                            <li><a href="American.html">HOME</a></li>
+                            <li><a href="aboutus">About Us</a></li>
+                            <li><a href="contactus">Contact Us</a></li>
+
+                        </ul>
+                    </nav>
+                    <div class="toggle_btn">
+                        <a href="tel:+1-888-650-4279" class="mob_call_btn">
+                            <i class="fa-solid fa-phone fs-4 text-white"></i>
+                        </a>
+                        <div class="hamburger" id="btn_trigger">
+                            <span class="top-line"></span>
+                            <span class="middle-line"></span>
+                            <span class="bottom-line"></span>
+                        </div>
+                    </div>
+                    <div class="toll_free">
+                        <a href="tel:+1-888-650-4279">
+                            <i class="fa-solid fa-phone fs-4 text-white"></i>
+                            +1 (888) 650-4279
+                            <p class="exprt_talk">Speak with Travel Experts</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="banner-sec">
+            <div class="banner-sec">
+                <div class="container">
+                    <div class="slider-main">
+                        <div class="slide">
+                            <img src="American/images/attractions/img-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="form-sec">
+                        <div class="form-main">
+                            <div class="form-heading">
+                                <h2>Find Flights</h2>
+                            </div>
+                            <form action="">
+                                <div class="radio-main">
+                                    <div class="radio_btn">
+                                        <input checked type="radio" id="radio1" name="trip">
+                                        <label class=" custom-check" for="radio1">round Trip</label>
+                                    </div>
+                                    <div class="radio_btn">
+                                        <input type="radio" id="radio2" name="trip">
+                                        <label class="custom-check" for="radio2">One Way</label>
+                                    </div>
+                                </div>
+                                <div class="travel_detail">
+                                    <fieldset>
+                                        <div class="input_main">
+                                            <label for="fly_from">From <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="fly_from" type="text" placeholder="City or Airport" required>
+                                        </div>
+                                        <div class="input_main">
+                                            <label for="fly_to">To <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="fly_to" type="text" placeholder="City or Airport" required>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <div class="input_main">
+                                            <label for="deprt_date">Depart <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="deprt_date" type="button" value="DD-MM-YY">
+                                        </div>
+                                        <div class="input_main">
+                                            <label for="rtrn_date">Return <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="rtrn_date" type="button" value="DD-MM-YY">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="travel_detail">
+                                    <fieldset>
+                                        <div class="input_main">
+                                            <label for="pass_name">Name <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="pass_name" type="text" placeholder="Name">
+                                        </div>
+                                        <div class="input_main">
+                                            <label for="pass_phone">Phone <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="pass_phone" type="text" placeholder="Phone">
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <div class="input_main">
+                                            <label for="pass_email">Email <i class="fa-solid fa-asterisk"></i></label>
+                                            <input id="pass_email" type="text" placeholder="Email">
+                                        </div>
+                                        <div class="input_main pass_icon">
+                                            <label for="Pass_count">Passenger <i
+                                                    class="fa-solid fa-asterisk"></i></label>
+                                            <input id="Pass_count" type="text" placeholder="1 Passenger,economy class">
+                                            <div class="-travel-dropdown">
+                                                <ul>
+                                                    <li class="categ-select">
+                                                        <label for="categ">Travel class</label>
+                                                        <select name="categ" id="categ"
+                                                            data-gtm-form-interact-field-id="0">
+                                                            <option value="categ">Economy class</option>
+                                                            <option value="categ">Premium class</option>
+                                                            <option value="categ">Business/First</option>
+                                                        </select>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="popup adultdrop">
+                                                            <span>
+                                                                <h4>passengers</h4>
+                                                            </span>
+                                                            <span class="adult1">
+                                                                <span class="ad_left">
+                                                                    Adults (16 - 64)
+                                                                </span>
+                                                                <span class="ad_right">
+                                                                    <button type="button" class="minus maincalulation"
+                                                                        id="sub1minus">- </button>
+                                                                    <input readonly="" type="text" class="count"
+                                                                        name="sub1" value="1" id="sub1">
+                                                                    <button type="button" class="plus maincalulation"
+                                                                        value="+" id="sub1plus">+</button>
+                                                                </span>
+                                                            </span>
+
+                                                            <span class="adult1">
+                                                                <span class="ad_left">
+                                                                    Child (2 - 11)
+                                                                </span>
+                                                                <span class="ad_right">
+                                                                    <button type="button" class="minus maincalulation"
+                                                                        id="sub1minus">- </button>
+                                                                    <input readonly="" type="text" class="count"
+                                                                        name="sub1" value="1" id="sub1">
+                                                                    <button type="button" class="plus maincalulation"
+                                                                        value="+" id="sub1plus">+</button>
+                                                                </span>
+                                                            </span>
+
+                                                            <span class="adult1">
+                                                                <span class="ad_left">
+                                                                    Infant (Under 2)
+                                                                </span>
+                                                                <span class="ad_right">
+                                                                    <button type="button" class="minus maincalulation"
+                                                                        id="sub1minus">- </button>
+                                                                    <input readonly="" type="text" class="count"
+                                                                        name="sub1" value="1" id="sub1">
+                                                                    <button type="button" class="plus maincalulation"
+                                                                        value="+" id="sub1plus">+</button>
+                                                                </span>
+                                                            </span>
+
+                                                            <hr>
+                                                            <span class="done">
+                                                                <p>Done</p>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="search_btn">
+                                    <input type="button" value="Search">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="accordion-sec">
+            <div class="container">
+
+                <div class="title-tile">
+                    <h2>FAQ's</h2>
+                </div>
+                <div class="heading">
+                    <h1><span>Does American Airlines have 24-hour customer service?</span></h1>
+                </div>
+                <div class="">
+                    <p>
+                        Yes, American Airlines offers 24-hour customer service. You can reach them any time of day or
+                        night for
+                        assistance with booking, cancellations, and other inquiries. Their dedicated team is available
+                        to help
+                        you resolve issues or answer questions. For immediate support, you can call their customer
+                        service number
+                        at <strong> +1 (888) 650-4279</strong>. Additionally, American Airlines has an online help
+                        center
+                        that provides answers to
+                        frequently asked questions, making it easier to find information at any hour.
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="container">
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">How to talk to American
+                    Airlines customer service?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Talking to American Airlines customer service is straightforward. You can call their customer
+                        service number
+                        at <strong> +1 (888) 650-4279</strong>, where you’ll navigate an automated menu. For a quicker
+                        connection to a representative,
+                        select options related to your inquiry, such as bookings or cancellations. Alternatively, you
+                        can visit the
+                        American Airlines website for chat support or use their mobile app for assistance. Having your
+                        booking
+                        details ready will help expedite your conversation and resolution process.
+
+                    </p>
+                </div>
+
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">How to book cheap
+                    American Airlines tickets?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Booking cheap American Airlines tickets can be achieved through several strategies. Start by
+                        being flexible
+                        with your travel dates, as flights on weekdays are often less expensive. Use the American
+                        Airlines website
+                        or app to compare prices and set fare alerts. Consider signing up for the AAdvantage loyalty
+                        program to
+                        earn miles, which can lead to discounts. Additionally, check for promotions or sales, and try
+                        booking well
+                        in advance to secure lower fares. For more tips, contact American Airlines customer service
+                        at <strong> +1 (888) 650-4279</strong>.
+                    </p>
+                </div>
+
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">What is the cancellation
+                    policy for American Airlines?</button>
+                <div class="accordion_panel">
+                    <p>
+                        American Airlines has a cancellation policy that varies depending on the fare type. Generally,
+                        if you cancel
+                        a flight within 24 hours of booking and it was purchased at least two days prior to departure,
+                        you’re
+                        eligible for a full refund. For non-refundable tickets, cancellations may result in travel
+                        credits minus
+                        any applicable fees. It's essential to review the specific rules for your ticket class. For
+                        detailed
+                        information, call American Airlines customer service at <strong> +1 (888) 650-4279</strong>.
+
+
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Does American Airlines
+                    have free cancellation?</button>
+                <div class="accordion_panel">
+                    <p>
+                        American Airlines allows free cancellation under certain conditions. If you cancel a flight
+                        within 24 hours
+                        of booking, and your flight is at least two days away, you’ll receive a full refund. However,
+                        for
+                        non-refundable tickets, cancellations after this period usually result in a credit for future
+                        travel,
+                        less any fees. Always check the specific fare rules for your ticket to understand cancellation
+                        options.
+                        For assistance with cancellations, contact American Airlines customer service at
+                        <strong> +1 (888) 650-4279</strong>.
+
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Does American Airlines
+                    compensate for cancellations?</button>
+                <div class="accordion_panel">
+                    <p>
+                        American Airlines may compensate travelers for cancellations based on the circumstances
+                        surrounding the
+                        flight. If a cancellation occurs due to factors within the airline’s control, such as mechanical
+                        issues
+                        or overbooking, they often offer rebooking options or a full refund. However, cancellations
+                        caused by
+                        weather or other external factors typically do not qualify for compensation. For specific
+                        guidance related
+                        to your situation, contact American Airlines customer service at <strong> +1 (888)
+                            650-4279</strong>
+                        for more information.
+
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">How much does American
+                    Airlines charge to change a flight?</button>
+                <div class="accordion_panel">
+                    <p>
+                        American Airlines charges for changing a flight depend on the fare type you purchased.
+                        For most standard domestic tickets, change fees have been eliminated, allowing you to change
+                        your flight
+                        without incurring additional costs, although fare differences will still apply. Basic Economy
+                        tickets
+                        generally do not allow changes. For detailed information regarding your specific booking and any
+                        potential
+                        fees, reach out to American Airlines customer service at <strong> +1 (888) 650-4279</strong> for
+                        assistance.
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Can I cancel a flight
+                    and get a refund on American Airlines?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Yes, you can cancel a flight with American Airlines and receive a refund under certain
+                        conditions.
+                        If you cancel within 24 hours of booking and your flight is scheduled for at least two days
+                        later,
+                        you are eligible for a full refund. For non-refundable tickets, cancellations typically result
+                        in a
+                        travel credit for future use, minus applicable fees. If you want to know about your ticket and
+                        refund
+                        options, call American Airlines customer service at <strong> +1 (888) 650-4279</strong>.
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">
+                    Can I change my flight with American Airlines without penalty?
+                </button>
+                <div class="accordion_panel">
+                    <p>
+                        You can change your flight with American Airlines without penalty for most standard fare
+                        tickets, as change
+                        fees have been waived for most domestic flights. However, if your ticket is a Basic Economy
+                        fare, changes
+                        are generally not permitted. When you change a ticket, you may still need to pay the fare
+                        difference if the
+                        new flight is more expensive. For details about your specific situation, reach out to American
+                        Airlines
+                        customer service at <strong> +1 (888) 650-4279</strong>.
+
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">What tickets are fully
+                    refundable on American Airlines?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Fully refundable tickets on American Airlines typically include Business and First Class fares,
+                        as well as
+                        certain flexible options available for purchase. These tickets allow for cancellations without
+                        penalties,
+                        ensuring a full refund if you adhere to the cancellation policy. Non-refundable tickets, like
+                        Basic Economy,
+                        usually offer limited options for refunds, resulting in travel credits instead. For more
+                        information
+                        about refundable ticket options, contact American Airlines customer service at
+                        <strong> +1 (888) 650-4279</strong> for
+                        assistance.
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Can I change my name on
+                    an American Airlines ticket?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Changing the name on an American Airlines ticket is generally not allowed. Tickets must match
+                        the
+                        passenger's identification. However, minor corrections, such as fixing typos, may be possible by
+                        contacting
+                        customer service. For specific inquiries or assistance regarding your situation, it’s best to
+                        reach out to
+                        American Airlines customer service at <strong> +1 (888) 650-4279</strong>. They can provide
+                        guidance
+                        on what can be done based
+                        on your ticket and the necessary steps to correct any issues.
+
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Can you change a
+                    passenger name on a flight?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Changing a passenger name on a flight is usually not permitted by American Airlines.
+                        Tickets are non-transferable and must reflect the traveler’s name exactly as it appears on their
+                        ID.
+                        In some cases, minor corrections may be allowed. For more details about your specific situation
+                        or to
+                        inquire about potential exceptions, contact American Airlines customer service at
+                        <strong> +1 (888) 650-4279</strong>. They
+                        can assist you with any necessary changes and provide information on the options available.
+
+                    </p>
+                </div>
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Can American Airlines
+                    tickets be transferred to another person?</button>
+                <div class="accordion_panel">
+                    <p>
+                        American Airlines tickets cannot be transferred to another person. The airline's policy states
+                        that
+                        tickets are non-transferable and must match the name on the identification of the traveler. If
+                        you find
+                        yourself unable to travel, you may need to cancel your ticket and rebook under the new
+                        passenger's name,
+                        which may involve fees or travel credits. For more information on your options, call American
+                        Airlines
+                        customer service at <strong> +1 (888) 650-4279</strong> for assistance tailored to your
+                        situation.
+                    </p>
+                </div>
+
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">How do I upgrade my seat
+                    on American Airlines?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Upgrading your seat on American Airlines can be done in several ways. You can request an upgrade
+                        at the
+                        time of booking through their website or mobile app. Additionally, if you’re a member of the
+                        AAdvantage
+                        program, you may have access to complimentary upgrades based on availability. For paid upgrades,
+                        you can
+                        select a different fare class when managing your booking. For more information on upgrades,
+                        contact
+                        American Airlines customer service at <strong> +1 (888) 650-4279</strong> for assistance.
+                    </p>
+                </div>
+
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Can I pay for an upgrade
+                    on American Airlines?</button>
+                <div class="accordion_panel">
+                    <p>
+                        Yes, you can pay for an upgrade on American Airlines. When booking your ticket, you may have the
+                        option
+                        to choose a higher fare class or select an upgrade during the check-in process. Additionally,
+                        you can
+                        manage your booking online and see available upgrade options, including paid upgrades to
+                        Business or First
+                        Class. For specific details regarding pricing and availability, reach out to American Airlines
+                        customer
+                        service at <strong> +1 (888) 650-4279</strong> for assistance.
+
+                    </p>
+                </div>
+
+                <button class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">Can you upgrade your
+                    seat after booking an American flight?</button>
+                <div class="accordion_panel">
+                    <p>
+                        You can upgrade your seat after booking an American Airlines flight, depending on availability.
+                        Upgrades can be requested through the American Airlines website, mobile app, or by calling
+                        customer
+                        service. If you are an AAdvantage member, you might also be eligible for complimentary upgrades.
+                        Additionally, paid upgrades can be available during check-in or at the gate. For detailed
+                        information
+                        and assistance with your specific reservation, contact American Airlines customer service at
+                        <strong> +1 (888) 650-4279</strong>.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="ft_title">
+                    <h4>QUICK LINK</h4>
+                </div>
+                <div class="quick_link-main">
+                    <div class="quick_link">
+                        <a href="aboutus.html"> About Us</a>
+                    </div>
+                    <div class="quick_link">
+                        <a href="PrivacyPolicy.html"> Privacy Policy</a>
+                    </div>
+                    <div class="quick_link">
+                        <a href="RefundPolicy.html"> Refund Policy</a>
+                    </div>
+                    <div class="quick_link">
+                        <a href="TermsCondition.html"> Terms & Condition</a>
+                    </div>
+                </div>
+
+                <div class="ft_title">
+                    <h4>NEED HELP</h4>
+                </div>
+
+                <div class="quick_link-main">
+                    <a class="ft_call_btn" href="tel:+1-888-650-4279">
+                        <i class="fa-solid fa-phone"></i>
+                        +1 (888) 650-4279
+                    </a>
+                </div>
+            </div>
+            <div class="footer_copright">
+                <span>Copyright © 2025 Faresbuddies.com, All Rights Reserved</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="American/js/custom.js"></script>
+
+</html>
